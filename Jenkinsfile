@@ -12,10 +12,8 @@ node() {
     stage('Checkout Self') {
         git branch: 'xray_video', credentialsId: '', url: repoURL
     }
-    
     stage('Cucumber Tests') {
-    
-        maven(maven: 'maven35') {
+        withMaven(maven: 'maven35') {
             sh """
 			cd ${env.WORKSPACE_LOCAL}
 			mvn clean test
@@ -31,10 +29,10 @@ node() {
 		def description = "[BUILD_URL|${env.BUILD_URL}]"
 		def labels = '["regression","automated_regression"]'
 		def environment = "DEV"
-		def testExecutionFieldId = 10008
-		def testEnvironmentFieldName = "customfield_10030"
+		def testExecutionFieldId = 10007
+		def testEnvironmentFieldName = "customfield_10132"
 		def projectKey = "WOO"
-		def xrayConnectorId = '51c233cf-06f8-4be6-9844-2d00d421ffe8'
+		def xrayConnectorId = '3ecdab2a-9ccb-4b99-99cb-2312e9135dc5'
 		def info = '''{
 				"fields": {
 					"project": {
@@ -56,5 +54,4 @@ node() {
 
 			step([$class: 'XrayImportBuilder', endpointName: '/cucumber/multipart', importFilePath: 'target/cucumber.json', importInfo: info, inputInfoSwitcher: 'fileContent', serverInstance: xrayConnectorId])
 		}
-		
 }
