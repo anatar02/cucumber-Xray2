@@ -18,7 +18,8 @@ node() {
     }
     
     stage('Cucumber Tests') {
-        withMaven(maven: 'maven35') {
+		    def mvnHome = tool 'maven35'
+        {
             sh """
 			cd ${env.WORKSPACE_LOCAL}
 			mvn clean test
