@@ -9,3 +9,14 @@ Feature: Data Tables Feature
       | Name          | Value | Rank |
       | Cinema ticket | 100   | 1    |
       | Voucher       | 200   | 2    |
+      
+      	@WOO-21
+	Scenario: Test2
+		  Scenario: First Hellol
+		    Given I have "first" task
+		    And Step from "First Hello" in "Data Tables Feature" feature file
+		    When I attempt to solve it
+		    Then I surely receive a prize
+		      | Name          | Value | Rank |
+		      | Cinema ticket | 100   | 1    |
+		      | Voucher       | 200   | 2    |
