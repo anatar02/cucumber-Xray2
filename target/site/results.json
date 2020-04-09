@@ -1,0 +1,125 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 3,
+        "name": "I have a job",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 88458952,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "The job is nice",
+            "match": {
+              "location": "Steps.theJobIsNice()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 48348,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "I get paid",
+            "match": {
+              "location": "Steps.iGetPaid()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "line": 14,
+        "name": "Second Hello",
+        "description": "",
+        "id": "background-feature;second-hello",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 2493485,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "I have \"second\" task",
+            "match": {
+              "arguments": [
+                {
+                  "val": "second",
+                  "offset": 8
+                }
+              ],
+              "location": "Steps.i_have_task(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 348249,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "Step from \"Second Hello\" in \"Background Feature\" feature file",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Second Hello",
+                  "offset": 11
+                },
+                {
+                  "val": "Background Feature",
+                  "offset": 29
+                }
+              ],
+              "location": "Steps.stepFromInFeatureFile(String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 35106,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "I attempt to solve it",
+            "match": {
+              "location": "Steps.i_attempt_to_solve_it()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 38059,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "I surely succeed",
+            "match": {
+              "location": "Steps.i_surely_succeed()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@smoke"
+          }
+        ]
+      }
+    ],
+    "name": "Background Feature",
+    "description": "",
+    "id": "background-feature",
+    "keyword": "Feature",
+    "uri": "src/test/resources/com/mycompany/app/background.feature",
+    "tags": []
+  }
+]
