@@ -14,7 +14,7 @@ node() {
     stage('Checkout Self') {
         git branch: 'xray_video', credentialsId: '', url: repoURL
     }
-	stages{
+	stage{
         stage('Cucumber Tests'){
             steps {
                 sh """
