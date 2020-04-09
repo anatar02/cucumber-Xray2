@@ -2,6 +2,11 @@ node() {
 
     def repoURL = 'https://github.com/gabrielstar/cucumber.git'
 
+	agent any
+    tools {
+        maven 'Maven_3.5.2' 
+    }
+
     stage("Prepare Workspace") {
         cleanWs()
         env.WORKSPACE_LOCAL = sh(returnStdout: true, script: 'pwd').trim()
@@ -12,14 +17,17 @@ node() {
     stage('Checkout Self') {
         git branch: 'xray_video', credentialsId: '', url: repoURL
     }
-    stage('Cucumber Tests') {
-        withMaven(maven: 'maven35') {
-            sh """
+	stages{
+        stage('Cucumber Tests'){
+            steps {
+                sh """
 			cd ${env.WORKSPACE_LOCAL}
 			mvn clean test
-		"""
+				"""
+            }
+          
         }
-    }
+
     stage('Expose report') {
         archive "**/cucumber.json"
         cucumber '**/cucumber.json'
