@@ -14,12 +14,7 @@ node() {
     }
 
         stage('Cucumber Tests'){
-            steps {
-                sh """
-			cd ${env.WORKSPACE_LOCAL}
-			mvn clean test
-				"""
-            }
+			echo 'Hello World'
           
         }
 
