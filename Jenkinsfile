@@ -32,8 +32,8 @@ node() {
 		def description = "[BUILD_URL|${env.BUILD_URL}]"
 		def labels = '["regression","automated_regression"]'
 		def environment = "DEV"
-		def testExecutionFieldId = 10007
-		def testEnvironmentFieldName = "customfield_10132"
+		def testExecutionFieldId = 10008
+		def testEnvironmentFieldName = "customfield_10030"
 		def projectKey = "WOO"
 		def xrayConnectorId = '3ecdab2a-9ccb-4b99-99cb-2312e9135dc5'
 		def info = '''{
