@@ -24,6 +24,7 @@ node() {
             }
           
         }
+	}
 
     stage('Expose report') {
         archive "**/cucumber.json"
