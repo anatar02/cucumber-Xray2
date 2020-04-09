@@ -9,6 +9,10 @@ node() {
         echo "Workspace set to:" + env.WORKSPACE_LOCAL
         echo "Build time:" + env.BUILD_TIME
     }
+	agent any
+    tools { 
+        maven 'maven35' 
+    },
     stage('Checkout Self') {
         git branch: 'master', credentialsId: '', url: repoURL
     }
