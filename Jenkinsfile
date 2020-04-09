@@ -31,7 +31,7 @@ node() {
 
 		def description = "[BUILD_URL|${env.BUILD_URL}]"
 		def labels = '["regression","automated_regression"]'
-		def environment = "DEV"
+		def environment = "DEV1"
 		def testExecutionFieldId = 10008
 		def testEnvironmentFieldName = "customfield_10030"
 		def projectKey = "WOO"
