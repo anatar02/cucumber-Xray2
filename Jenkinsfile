@@ -2,10 +2,7 @@ node() {
 
     def repoURL = 'https://github.com/gabrielstar/cucumber.git'
 
-	agent any
-    tools {
-        maven 'Maven_3.5.2' 
-    }
+	
 
     stage("Prepare Workspace") {
         cleanWs()
