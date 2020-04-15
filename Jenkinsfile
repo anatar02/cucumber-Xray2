@@ -1,6 +1,6 @@
 node() {
 
-    def repoURL = 'https://github.com/gabrielstar/cucumber.git'
+    def repoURL = 'https://github.com/anatar02/cucumber-Xray2.git'
 
     stage("Prepare Workspace") {
         cleanWs()
