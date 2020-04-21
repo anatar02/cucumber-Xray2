@@ -12,14 +12,17 @@ node() {
     stage('Checkout Self') {
         git branch: 'xray_video', credentialsId: '', url: repoURL
     }
-    stage('Cucumber Tests') {
-        withMaven(maven: 'maven35') {
-            sh """
+  
+
+	 stage('Cucumber Tests'){
+			echo 'Hello World'
+			  sh """
 			cd ${env.WORKSPACE_LOCAL}
 			mvn clean test
-		"""
+				"""
+          
         }
-    }
+
     stage('Expose report') {
         archive "**/cucumber.json"
         cucumber '**/cucumber.json'
